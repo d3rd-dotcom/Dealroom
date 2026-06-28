@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { RefreshCw, User, Shield, Wrench, Crown, Building2, CheckCircle2 } from 'lucide-react'
-import { Card, Badge, StatusIndicator, Button, EmptyState, Divider } from '../ui'
+import { Card, Badge, StatusIndicator, Button, EmptyState, Divider } from '@/components/ui'
 import type { Stakeholder, ContextSummary, DealEvent } from '@/lib/types'
 
 /* ══════════════════════════════════════════════

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-teal-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Small caps style label used above section groups on the landing page
+     and the deal creation form. */
+  .dr-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-wider text-teal-500;
+  }
+
+  /* Section heading used inside cards across the dashboard. */
+  .dr-section-title {
+    @apply text-sm font-semibold text-teal-900;
+  }
+
+  /* Form field label. */
+  .dr-label {
+    @apply block text-xs font-medium text-teal-600 mb-1.5;
+  }
+
+  /* Shared input style for text fields and selects in the deal creation form. */
+  .dr-input {
+    @apply w-full h-9 px-3 rounded-lg border border-cream-300 bg-white text-sm text-teal-900
+           placeholder:text-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-400
+           focus:border-teal-400 transition-shadow;
+  }
+
+  /* Two tone wordmark gradient: teal to sky, matching the logo source colors
+     documented in tailwind.config.ts. */
+  .gradient-logo {
+    background-image: linear-gradient(135deg, #2e9e96 0%, #6bc4dc 100%);
+  }
+}

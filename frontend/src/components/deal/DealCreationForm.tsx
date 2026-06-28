@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Plus, Trash2, ChevronRight, ArrowLeft } from 'lucide-react'
-import { Button, Card, Badge } from '../ui'
+import { Button, Card, Badge } from '@/components/ui'
 import type { StakeholderRole, DealStage, CreateDealPayload } from '@/lib/types'
 import { dealsApi } from '@/lib/api'
 
@@ -78,10 +78,10 @@ export default function DealCreationForm() {
 
     const res = await dealsApi.create(payload)
 
-    if (res.success && res.data) {
+    if (res.success) {
       router.push(`/deals/${res.data.dealId}`)
     } else {
-      setError(res.error ?? 'Failed to create deal room.')
+      setError(res.message ?? 'Failed to create deal room.')
       setLoading(false)
     }
   }
